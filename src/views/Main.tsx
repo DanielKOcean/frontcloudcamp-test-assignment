@@ -6,6 +6,7 @@ function Main() {
       <div>
         This is Main page 🚀🚀🚀🚀🚀
       </div>
+      <a href="step1">Step 1</a>
     </>
   )
 }
