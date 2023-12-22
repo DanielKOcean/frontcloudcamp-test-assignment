@@ -1,0 +1,221 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 62px 110px 80px;
+    border-radius: 12px;
+    background-color: #FFF;
+}
+
+.stepper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 67px;
+}
+
+.stepperLine {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 100%;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 42px;
+}
+
+.step.left {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 42px;
+}
+
+.step.right {
+    align-items: flex-end;
+    margin-right: 0;
+    margin-left: 42px;
+}
+
+.step p {
+    margin: 0;
+    padding: 0;
+    color: #5558FA;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: #A6A6A6;
+    z-index: 1;
+}
+
+.dot.active {
+    background: #5558FA;
+}
+
+.dot.current {
+    background: #5558FA;
+}
+
+.form {
+    width: 300px;
+    margin-bottom: 64px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.input-field:last-child {
+    margin-bottom: 0;
+}
+
+.input-field label {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+}
+
+.input-field p {
+    margin: 0;
+    margin-top: 8px;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #333;
+}
+
+.input-field input,
+.input-field select {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    padding: 12px;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.form-select {
+    --form-select-bg-img: url(../assets/chevron-down.svg);
+    border: 1px solid var(--select-border);
+    border-radius: 4px;
+    padding: 12px 34px 12px 12px;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    background-color: #fff;
+    background-image: var(--form-select-bg-img, none);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position-x: right;
+    background-position-y: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+
+    border-radius: 4px;
+    background: #5558FA;
+    color: #FFF;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.button.primary {
+    border: 1.5px solid #5558FA;
+}
+
+.button.primary:hover {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.button.secondary {
+    border: 1.5px solid #5558FA;
+    background: #FFF;
+    color: #5558FA;
+}
+
+.button.secondary:hover {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: #FFF;
+}
+
+@media (max-width: 450px) {
+    .container {
+        min-width: 200px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column-reverse;
+    }
+
+    .button {
+        margin-bottom: 15px;
+    }
+
+    .button:first-child {
+        margin-bottom: 0;
+    }
+}

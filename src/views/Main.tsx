@@ -30,11 +30,7 @@ function Main() {
       </div>
       <div className="buttons">
         <button id="button-start" type="button" className="button primary">Начать</button>
-      </div>
-      {/* <div className="buttons">
-        <button id="button-back" className="button secondary" type="button">Назад</button>
-        <button id="button-next" className="button primary" type="button">Далее</button>
-      </div> */}
+      </div>      
     </div>
   )
 }
