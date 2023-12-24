@@ -40,6 +40,10 @@ function Step2() {
           </li>
         </ol>
       </div>
+      <div className={styles.buttons}>
+        <button id="button-back" className={`${styles.button} ${styles.secondary}`} type="button">Назад</button>
+        <button id="button-next" className={`${styles.button} ${styles.primary}`} type="button">Далее</button>
+      </div>
     </div>
   )
 }
