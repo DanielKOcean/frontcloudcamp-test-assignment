@@ -24,7 +24,7 @@
 
 .stepper {
     display: flex;
-    margin: 0;
+    margin: 0 0 66px 0;
     padding: 0;
 }
 
@@ -86,7 +86,7 @@
     font-weight: 400;
 }
 
-.stepperItem:after {
+.stepperItem::after {
     content: "";
     position: absolute;
     top: calc(var(--stp-dot-size) / 2 - 4px);
@@ -95,12 +95,12 @@
     order: -1;
 }
 
-.stepperItem:first-child:after {
+.stepperItem:first-child::after {
     left: calc(var(--stp-dot-size) / 2);
     width: calc(150% - var(--stp-dot-size) / 2);
 }
 
-.stepperItem.done:first-child:after {
+.stepperItem.done:first-child::after {
     background-color: var(--stp-line-color-active);
 }
 
@@ -110,8 +110,112 @@
     background-color: var(--stp-line-color-neutral);
 }
 
-.stepperItem.done:nth-child(2):after {
+.stepperItem.done:nth-child(2)::after {
     background-color: var(--stp-line-color-active);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 300px;
+    margin-bottom: 64px;
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.fieldset.gap0 {
+    gap: 0;
+}
+
+.legend {
+    float: left;
+    padding: 0;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.formCheck {
+    display: flex;
+    gap: 8px;
+}
+
+.formCheckInput {
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    border: 1.5px solid var(--input-border);
+}
+
+.formCheckInput[type=checkbox] {
+    border-radius: 4px;
+}
+
+.formCheckInput[type=radio] {
+    border-radius: 50%;
+}
+
+.formCheckLabel {
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.formControl {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    padding: 12px;
+    font-family: var(--fcc-font-sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.formButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 19px;
+    border: none;
+    background: none;
+}
+
+.addButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    padding: 12px;
+    background: none;
+    border: 1.5px solid #5558FA;
+    border-width: 1.5px;
+    border-radius: 4px;
 }
 
 .buttons {
