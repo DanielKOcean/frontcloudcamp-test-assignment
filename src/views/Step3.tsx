@@ -19,7 +19,7 @@ function Step3() {
       <form className={styles.form}>
         <div className={styles.formInputBlock}>
           <label className={styles.formLabel} htmlFor="field-about">About</label>
-          <input className={styles.formControl} type="text" name="field-about" id="field-about" placeholder="Placeholder" />
+          <textarea className={styles.formControl} name="field-about" id="field-about" placeholder="Placeholder"></textarea>
           <span className={styles.formTip}>Tip</span>
         </div>
       </form>
